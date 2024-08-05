@@ -1,0 +1,118 @@
+/* Fuente y colores base */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&display=swap');
+
+:root {
+    --main-bg-color: #0d0d0d;
+    --main-text-color: #00ff99;
+    --secondary-text-color: #ff00ff;
+    --accent-color: #00ccff;
+    --hover-color: #ffcc00;
+    --button-bg-color: #00ff99;
+    --button-hover-bg-color: #ff00ff;
+    --border-radius: 8px;
+    --transition-speed: 0.3s;
+}
+
+body {
+    margin: 0;
+    font-family: 'Orbitron', sans-serif;
+    background-color: var(--main-bg-color);
+    color: var(--main-text-color);
+}
+
+h1 {
+    color: var(--accent-color);
+    text-align: center;
+}
+
+h2 {
+    color: var(--main-text-color);
+    text-align: center;
+}
+
+main {
+    padding: 20px;
+}
+
+/* Botón */
+.btn-fact {
+    background-color: var(--button-bg-color);
+    color: var(--main-bg-color);
+    padding: 12px 24px;
+    border: none;
+    border-radius: var(--border-radius);
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color var(--transition-speed), transform var(--transition-speed), box-shadow var(--transition-speed);
+    box-shadow: 0 4px 6px rgba(0, 255, 153, 0.5);
+    cursor: pointer;
+    margin: 10px;
+}
+
+.btn-fact:hover {
+    background-color: var(--button-hover-bg-color);
+    box-shadow: 0 6px 10px rgba(255, 0, 255, 0.5);
+    transform: translateY(-2px);
+}
+
+.btn-fact:active {
+    background-color: var(--hover-color);
+    box-shadow: 0 3px 5px rgba(255, 204, 0, 0.5);
+    transform: translateY(0);
+}
+
+/* Contenedor de curiosidades */
+.fact {
+    background-color: #1a1a1a;
+    border-radius: var(--border-radius);
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 4px 6px rgba(0, 255, 153, 0.5);
+}
+
+.fact p {
+    font-size: 1.2em;
+    line-height: 1.5;
+    color: var(--secondary-text-color);
+}
+
+/* Imagen responsiva */
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 6px rgba(0, 204, 255, 0.5);
+}
+
+/* Canvas responsivo */
+canvas {
+    width: 100%;
+    height: auto;
+    display: block;
+    max-width: 100%;
+    border: 2px solid var(--accent-color);
+    border-radius: var(--border-radius);
+}
+
+/* Efectos de neón */
+.neon {
+    text-shadow: 0 0 5px var(--accent-color), 0 0 10px var(--accent-color), 0 0 20px var(--accent-color), 0 0 40px var(--accent-color);
+}
+
+/* Diseño responsivo */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    p {
+        font-size: 1em;
+    }
+}
